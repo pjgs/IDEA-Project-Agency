@@ -1,0 +1,134 @@
+/* ============================================
+   CARD COMPONENT (BEM)
+   ============================================ */
+
+/* Block: card */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-6);
+    border-radius: var(--radius-2xl);
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-light);
+    transition: all var(--transition-slow);
+}
+
+.dark .card {
+    background-color: var(--bg-dark);
+    border-color: var(--border-dark);
+}
+
+/* Modifier: Hoverable */
+.card--hoverable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Modifier: Digital Theme */
+.card--digital:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.1);
+}
+
+/* Modifier: Print Theme */
+.card--print:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Element: Icon Container */
+.card__icon {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-gray-100);
+    color: var(--text-primary-light);
+    margin-bottom: var(--space-6);
+    transition: all var(--transition-base);
+}
+
+.dark .card__icon {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary-dark);
+}
+
+.card--digital:hover .card__icon {
+    background-color: var(--brand-digital);
+    color: var(--color-white);
+}
+
+.card--print:hover .card__icon {
+    background-color: var(--brand-print);
+    color: var(--color-white);
+}
+
+/* Element: Title */
+.card__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary-light);
+    margin-bottom: var(--space-2);
+    transition: color var(--transition-base);
+}
+
+.dark .card__title {
+    color: var(--text-primary-dark);
+}
+
+.card--digital:hover .card__title {
+    color: var(--brand-digital);
+}
+
+.dark .card--digital:hover .card__title {
+    color: var(--color-purple-400);
+}
+
+.card--print:hover .card__title {
+    color: var(--brand-print);
+}
+
+.dark .card--print:hover .card__title {
+    color: var(--color-blue-400);
+}
+
+/* Element: Description */
+.card__description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary-light);
+    line-height: var(--leading-relaxed);
+}
+
+.dark .card__description {
+    color: var(--text-secondary-dark);
+}
+
+/* Element: Footer */
+.card__footer {
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-100);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dark .card__footer {
+    border-top-color: var(--color-gray-800);
+}
+
+/* Element: Arrow Icon */
+.card__arrow {
+    color: var(--color-gray-400);
+    transition: color var(--transition-base);
+}
+
+.card--digital:hover .card__arrow {
+    color: var(--brand-digital);
+}
+
+.card--print:hover .card__arrow {
+    color: var(--brand-print);
+}

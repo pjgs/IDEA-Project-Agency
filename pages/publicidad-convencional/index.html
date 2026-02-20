@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Publicidad Convencional | IDEA projet Barquisimeto</title>
+    <meta name="description"
+        content="Soluciones de Publicidad Convencional en Barquisimeto. Papelería, Material POP, Vallas y Branding Físico con IDEA projet." />
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <meta name="geo.region" content="VE-K" />
+    <meta name="geo.placename" content="Barquisimeto" />
+    <meta name="geo.position" content="10.0678;-69.3474" />
+    <meta name="ICBM" content="10.0678, -69.3474" />
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Publicidad","provider":{"@type":"LocalBusiness","name":"IDEA projet"},"areaServed":"Barquisimeto"}</script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Preload critical components -->
+    <link rel="preload" href="../../components/header.html" as="fetch" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FFAE42",  // Changed to Orange
+                        "primary-dark": "#E69A2E", // Changed to Darker Orange
+                        "background-light": "#f7f9fc", // Slight blue tint for light mode bg
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#121212",
+                        "surface-highlight": "#1e1e1e",
+                        "border-dark": "#262626"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* ── Holographic Button Effect ── */
+        .btn-holo {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-holo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg,
+                    transparent 20%,
+                    rgba(255, 255, 255, 0.55) 35%,
+                    rgba(255, 174, 66, 0.4) 45%,
+                    rgba(168, 85, 247, 0.35) 55%,
+                    rgba(59, 130, 246, 0.35) 65%,
+                    rgba(16, 185, 129, 0.3) 75%,
+                    transparent 85%);
+            background-size: 220% 220%;
+            background-position: 200% 50%;
+            opacity: 0;
+            transition: opacity 0.4s ease, background-position 0.6s ease;
+            z-index: 1;
+            pointer-events: none;
+            border-radius: inherit;
+            mix-blend-mode: screen;
+        }
+
+        .btn-holo:hover::before {
+            opacity: 1;
+            background-position: -20% 50%;
+        }
+
+        .btn-holo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 174, 66, 0.5), 0 0 40px rgba(168, 85, 247, 0.25), 0 0 60px rgba(59, 130, 246, 0.15);
+        }
+
+        .btn-holo span {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display overflow-x-hidden">
+    <!-- Header Dinámico - Cargado desde components/header.html -->
+    <div id="header-placeholder">
+        <!-- Skeleton loader mientras carga el header -->
+        <div
+            class="fixed top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg animate-pulse">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="h-8 w-8 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                        <div class="h-6 w-32 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                    </div>
+                    <div class="hidden md:flex items-center gap-8">
+                        <div class="h-4 w-16 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                        <div class="h-4 w-24 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                        <div class="h-4 w-28 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                        <div class="h-4 w-16 bg-gray-300 dark:bg-gray-700 rounded"></div>
+                    </div>
+                    <div class="h-10 w-32 bg-gray-300 dark:bg-gray-700 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="flex-grow flex flex-col items-center w-full pt-16">
+        <div class="w-full relative overflow-hidden">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-20 pointer-events-none">
+                <div class="absolute top-[-20%] left-[20%] w-[500px] h-[500px] rounded-full bg-primary blur-[120px]">
+                </div>
+            </div>
+            <div
+                class="layout-container max-w-[1280px] mx-auto px-6 py-16 md:py-24 lg:py-32 flex flex-col items-center text-center relative z-10">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-primary mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Envíos a todo el país
+                </div>
+                <h1
+                    class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight text-white whitespace-nowrap mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/50">
+                    Impacto <span class="text-primary-light">Tangible</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+                    Publicidad convencional que construye presencia en el mundo real. Crea una conexión física duradera
+                    con
+                    tu audiencia a través de impresiones premium, señalización y materiales de branding.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                    <a href="#services"
+                        class="h-12 px-8 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold transition-all flex items-center justify-center gap-2">
+                        Explorar Servicios
+                        <span class="material-symbols-outlined text-sm">arrow_downward</span>
+                    </a>
+                    <a href="../../index.html#contact"
+                        class="flex items-center justify-center h-12 px-8 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold transition-all">
+                        Solicitar Cotización
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[1280px] mx-auto px-6 py-10" id="services">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Nuestros Servicios Principales</h2>
+                    <p class="text-gray-400">Soluciones integrales de publicidad física.</p>
+                </div>
+                <div class="h-[1px] flex-1 bg-white/10 ml-6 mb-2 hidden md:block"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-[300px] md:auto-rows-[360px]">
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-highlight border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <!-- Background Image with Color Reveal Effect -->
+                    <div
+                        class="absolute inset-0 z-0 transition-all duration-700 opacity-10 grayscale group-hover:opacity-30 group-hover:grayscale-0 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1635405074683-96d6921a2a68?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Primary Color Hover Gradient -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <!-- Black gradient PROTECTOR (Always on top of other backgrounds) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-0 opacity-90 pointer-events-none">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-4 backdrop-blur-sm border border-primary/20">
+                            <span class="material-symbols-outlined">print</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                            Papelería</h3>
+                        <p class="text-gray-400 text-sm max-w-[90%]">Tarjetas de presentación, membretes, folletos y
+                            volantes
+                            diseñados para impresionar al primer contacto.</p>
+                        <div
+                            class="mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-primary font-bold text-sm">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-highlight border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <!-- Background Image with Color Reveal Effect -->
+                    <div
+                        class="absolute inset-0 z-0 transition-all duration-700 opacity-10 grayscale group-hover:opacity-30 group-hover:grayscale-0 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Primary Color Hover Gradient -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-bl from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <!-- Black gradient PROTECTOR (Always on top of other backgrounds) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-0 opacity-90 pointer-events-none">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-4 backdrop-blur-sm border border-primary/20">
+                            <span class="material-symbols-outlined">storefront</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">POP
+                            (Point of Purchase)</h3>
+                        <p class="text-gray-400 text-sm max-w-[90%]">Exhibidores, stoppers y material promocional
+                            que convierten visitantes en compradores.</p>
+                        <div
+                            class="mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-primary font-bold text-sm">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-highlight border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <!-- Background Image with Color Reveal Effect -->
+                    <div
+                        class="absolute inset-0 z-0 transition-all duration-700 opacity-10 grayscale group-hover:opacity-30 group-hover:grayscale-0 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Primary Color Hover Gradient -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <!-- Black gradient PROTECTOR (Always on top of other backgrounds) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-0 opacity-90 pointer-events-none">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-4 backdrop-blur-sm border border-primary/20">
+                            <span class="material-symbols-outlined">styler</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">OOH
+                            (Out of Home)</h3>
+                        <p class="text-gray-400 text-sm max-w-[90%]">Vallas, paradas de autobús e impresiones de gran
+                            formato
+                            que dominan el paisaje urbano.</p>
+                        <div
+                            class="mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-primary font-bold text-sm">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-xl bg-surface-highlight border border-white/5 hover:border-primary/50 transition-all duration-300">
+                    <!-- Background Image with Color Reveal Effect -->
+                    <div
+                        class="absolute inset-0 z-0 transition-all duration-700 opacity-10 grayscale group-hover:opacity-30 group-hover:grayscale-0 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1616628188502-413f2fe46e5e?q=80&w=1200&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <!-- Primary Color Hover Gradient -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tl from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                    </div>
+                    <!-- Black gradient PROTECTOR (Always on top of other backgrounds) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-0 opacity-90 pointer-events-none">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-4 backdrop-blur-sm border border-primary/20">
+                            <span class="material-symbols-outlined">draw</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                            Branding</h3>
+                        <p class="text-gray-400 text-sm max-w-[90%]">Aplicación de logo, kits de identidad corporativa y
+                            guías de marca para mantener la consistencia.</p>
+                        <div
+                            class="mt-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-primary font-bold text-sm">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[1280px] mx-auto px-6 py-6">
+            <div class="relative w-full rounded-2xl bg-surface-highlight border border-white/10 overflow-hidden">
+                <!-- Mapa de Venezuela - Marca de agua suave -->
+                <div class="absolute inset-0 pointer-events-none" aria-hidden="true"
+                    style="background-image: url('assets/images/VEN_MAP_IDEAPROJECAGENCY.jpg'); background-size: cover; background-position: center 20%; background-repeat: no-repeat; opacity: 0.07; mix-blend-mode: luminosity;">
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-8">
+                    <div class="flex flex-col gap-3 w-full md:w-auto">
+                        <!-- Ícono + Título en la misma fila -->
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex-shrink-0 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/30">
+                                <span class="material-symbols-outlined" style="font-size: 32px;">local_shipping</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Envío Nacional</h3>
+                        </div>
+                        <!-- Texto debajo justificado -->
+                        <p class="text-gray-300 max-w-lg text-justify">
+                            Gestionamos la logística para que tú no tengas que hacerlo. Entrega segura, rastreada y
+                            puntual de tus materiales publicitarios a cualquier ciudad del país.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="../../index.html#contact"
+                            class="whitespace-nowrap px-6 py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white font-bold transition-all text-sm inline-block">
+                            Cotizar Ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-w-[1280px] mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">¿Por qué Publicidad Física?</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    En un mundo digital, los activos tangibles crean una conexión premium y confiable con tu
+                    audiencia.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-8 rounded-xl bg-surface-highlight border border-white/5 hover:bg-white/5 transition-all">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-[#332017] flex items-center justify-center text-white mb-6 border border-[#7e5c2b]">
+                        <span class="material-symbols-outlined">psychology</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Alta Retención</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Los anuncios físicos activan múltiples sentidos, generando mayores tasas de recordación
+                        comparado con las
+                        impresiones digitales fugaces.
+                    </p>
+                </div>
+                <div class="p-8 rounded-xl bg-surface-highlight border border-white/5 hover:bg-white/5 transition-all">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-[#332017] flex items-center justify-center text-white mb-6 border border-[#7e5c2b]">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Punto de Contacto Físico</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Dale a tus clientes algo que puedan sostener. Textura, peso y acabado comunican calidad
+                        instantáneamente.
+                    </p>
+                </div>
+                <div class="p-8 rounded-xl bg-surface-highlight border border-white/5 hover:bg-white/5 transition-all">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-[#332017] flex items-center justify-center text-white mb-6 border border-[#7e5c2b]">
+                        <span class="material-symbols-outlined">diamond</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Calidad Premium</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Utilizamos únicamente materiales de alta gama y técnicas de impresión que reflejan el verdadero
+                        valor de tu
+                        marca.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-surface-highlight border-t border-white/5 py-16">
+            <div class="max-w-[1280px] mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">¿Listo para hacer tu marca tangible?</h2>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto">Obtén una cotización personalizada para tu proyecto en 24
+                    horas. Sin
+                    cargos ocultos, solo servicio de calidad.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="../../index.html#contact"
+                        class="btn-holo flex items-center justify-center px-10 py-4 bg-primary text-white rounded-lg font-bold text-lg shadow-lg shadow-primary/25">
+                        <span>Solicitar Cotización</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer Placeholder - Se carga dinámicamente desde components/footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader - Carga header y footer automáticamente -->
+    <script src="../../components/component-loader.js"></script>
+</body>
+
+</html>

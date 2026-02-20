@@ -1,0 +1,16 @@
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+node_modules/
+.env
+_DEPRECATED_TRASH/
+
+# Agent specific
+.agent/

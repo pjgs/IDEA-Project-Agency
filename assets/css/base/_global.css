@@ -1,0 +1,76 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+body {
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+.dark body {
+    background-color: var(--bg-dark);
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding-inline: var(--space-6);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: var(--space-8);
+    }
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--brand-digital);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--brand-digital);
+    color: var(--color-white);
+}
+
+/* Scrollbar styling (webkit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-400);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: var(--color-gray-600);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+}

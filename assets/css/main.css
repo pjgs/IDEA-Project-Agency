@@ -1,0 +1,39 @@
+/* ============================================
+   MAIN CSS - IDEA PROJET AGENCY
+   ============================================
+   
+   This file imports all CSS modules in the correct order.
+   Following the ITCSS (Inverted Triangle CSS) methodology:
+   
+   1. Abstract - Variables, tokens (no output)
+   2. Base - Resets, typography, global styles
+   3. Layout - Header, footer, sections
+   4. Components - Reusable UI components
+   5. Utilities - Helper classes
+   
+   ============================================ */
+
+/* ========== ABSTRACT ========== */
+@import url('abstract/_tokens.css');
+
+/* ========== BASE ========== */
+@import url('base/_reset.css');
+@import url('base/_typography.css');
+@import url('base/_global.css');
+
+/* ========== LAYOUT ========== */
+@import url('layout/_header.css');
+@import url('layout/_footer.css');
+@import url('layout/_sections.css');
+
+/* ========== COMPONENTS ========== */
+@import url('components/_button.css');
+@import url('components/_card.css');
+@import url('components/_form.css');
+
+/* ========== UTILITIES ========== */
+@import url('utilities/_helpers.css');
+
+/* ========== GOOGLE FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');

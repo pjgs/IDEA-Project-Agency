@@ -1,0 +1,112 @@
+/* ============================================
+   BUTTON COMPONENT (BEM)
+   ============================================ */
+
+/* Block: btn */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    /* 48px */
+    padding-inline: var(--space-8);
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+    border-radius: var(--radius-lg);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Modifier: Primary (Black/White) */
+.btn--primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--primary:hover:not(:disabled) {
+    background-color: var(--color-gray-800);
+    transform: scale(1.05);
+}
+
+.dark .btn--primary {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.dark .btn--primary:hover:not(:disabled) {
+    background-color: var(--color-gray-200);
+}
+
+/* Modifier: Secondary (Outline) */
+.btn--secondary {
+    background-color: transparent;
+    color: var(--text-primary-light);
+    border: 1px solid var(--border-light);
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background-color: var(--color-gray-100);
+}
+
+.dark .btn--secondary {
+    color: var(--text-primary-dark);
+    border-color: var(--border-dark);
+}
+
+.dark .btn--secondary:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Modifier: Digital (Purple) */
+.btn--digital {
+    background-color: var(--brand-digital);
+    color: var(--color-white);
+}
+
+.btn--digital:hover:not(:disabled) {
+    background-color: var(--brand-digital-hover);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+/* Modifier: Print (Blue) */
+.btn--print {
+    background-color: var(--brand-print);
+    color: var(--color-white);
+}
+
+.btn--print:hover:not(:disabled) {
+    background-color: var(--brand-print-hover);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Modifier: Size Large */
+.btn--lg {
+    height: 3.5rem;
+    /* 56px */
+    padding-inline: var(--space-10);
+    font-size: var(--text-lg);
+}
+
+/* Modifier: Size Small */
+.btn--sm {
+    height: 2.5rem;
+    /* 40px */
+    padding-inline: var(--space-6);
+    font-size: var(--text-sm);
+}
+
+/* Element: Icon */
+.btn__icon {
+    margin-inline-start: var(--space-2);
+    font-size: 1.25em;
+}
