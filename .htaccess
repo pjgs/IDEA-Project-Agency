@@ -12,7 +12,10 @@
 
 Options -MultiViews
 RewriteEngine On
-RewriteBase /nombre-subcarpeta/
+RewriteBase /
+
+# ── Página de error personalizada ─────────────────────────
+ErrorDocument 404 /404.html
 
 # 1) Si la URL incluye .html → redirige SIN .html (301 permanente, SEO-safe)
 RewriteCond %{THE_REQUEST} \s/+[^?]*\.html[\s?] [NC]
@@ -34,9 +37,24 @@ RewriteRule ^(.+?)/?$ $1.html [L]
   ExpiresByType text/javascript  "access plus 1 month"
 </IfModule>
 
-# ── Seguridad básica ──────────────────────────────────
+# ── Seguridad básica ──────────────────────────────────────
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set X-XSS-Protection "1; mode=block"
 </IfModule>
+
+# ── Proteger archivos sensibles ────────────────────────────
+# Bloquear acceso directo al mailer desde el navegador (solo acepta POST desde JS)
+<Files "send-mail.php">
+  <IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+  </IfModule>
+</Files>
+
+# Bloquear acceso a archivos de log y configuración ocultos
+<FilesMatch "\.(log|env|json|md|gitignore|htpasswd)$">
+  Require all denied
+</FilesMatch>
