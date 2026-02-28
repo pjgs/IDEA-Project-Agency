@@ -1053,6 +1053,8 @@
                                         if (json.success) {
                                             showFeedback('\u2705 \u00a1Mensaje enviado! Te contactaremos pronto.', 'success');
                                             fbq('track', 'Contact'); // Meta Pixel: formulario enviado con éxito
+                                            window.dataLayer = window.dataLayer || [];
+                                            window.dataLayer.push({ 'event': 'contacto_exitoso' }); // GTM: evento AJAX
                                             form.reset();
                                         } else {
                                             showFeedback(json.message || 'Error al enviar. Int\u00e9ntalo de nuevo.', 'error');
