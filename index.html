@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="es">
 
 <head>
@@ -365,6 +365,16 @@
             position: relative;
             z-index: 2;
         }
+
+        /* ── Hero Float Animation ── */
+        .hero-float {
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
     </style>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -481,42 +491,15 @@
 
                 </div>
                 <div class="relative w-full h-full min-h-[400px] flex items-center justify-center z-10">
-                    <div class="relative w-full aspect-square max-w-[500px]">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-purple-600/40 to-black rounded-3xl opacity-30 rotate-6 transform transition-transform duration-1000 hover:rotate-3">
-                        </div>
-                        <div class="absolute inset-0 bg-gradient-to-bl from-orange-900/60 to-black rounded-3xl opacity-80 -rotate-3 transform border border-white/10 backdrop-blur-sm overflow-hidden"
-                            data-alt="Abstract futuristic grayscale light trails representing digital speed and connectivity"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAeF0GpKda7d39qI-zFzAXtxES01QfOPLH3y0FNPnciYJm_431sWWdor3hg3jerlqRG4tNEti6wmvZF-nJqAfZUv04q1qF1x3NpaE8BFyPWFcpeHF7pukWTRD4m1uk5adSQ2whn-d7h5ETkxB0dRr5G4ePOs48u9pWP31lRSkiZenB1bMzFjusCjXZCG8fVygsSYIR_USwDuZnzsHc6HM-RcqR_6Bh221qFLyRmXvqIoHXjIpIHcgh2YMaViToTKRmUTE8jtd88aE'); background-size: cover; background-position: center; filter: grayscale(100%);">
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-orange-900/30 to-purple-900/30 mix-blend-overlay">
-                            </div>
-                        </div>
-                        <div class="absolute -right-4 top-10 bg-surface-dark/90 backdrop-blur-md border border-purple-500/30 p-4 rounded-xl shadow-2xl animate-bounce shadow-purple-900/20"
-                            style="animation-duration: 3s;">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-purple-500/20 p-2 rounded-lg text-purple-300">
-                                    <span class="material-symbols-outlined">trending_up</span>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-gray-400">ROI Digital</div>
-                                    <div class="text-lg font-bold text-white">+145%</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute -left-4 bottom-20 bg-surface-dark/90 backdrop-blur-md border border-orange-500/30 p-4 rounded-xl shadow-2xl animate-bounce shadow-orange-900/20"
-                            style="animation-duration: 4s;">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-orange-500/20 p-2 rounded-lg text-orange-300">
-                                    <span class="material-symbols-outlined">public</span>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-gray-400">Alcance Físico</div>
-                                    <div class="text-lg font-bold text-white">Nacional</div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Glow backdrop -->
+                    <div class="absolute w-[80%] h-[80%] rounded-full pointer-events-none"
+                        style="background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(255,174,66,0.10) 40%, transparent 70%); filter: blur(40px);">
                     </div>
+                    <!-- IDEA BOOM Image -->
+                    <img src="assets/images/IDEA_BOOM.webp"
+                        alt="IDEA Project - Servicios de publicidad digital y convencional: web, redes sociales, branding e impresiones"
+                        class="relative w-full max-w-[580px] drop-shadow-2xl hero-float"
+                        style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
                 </div>
             </div>
         </section>
@@ -791,43 +774,43 @@
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
-                                alt="Alejandro Rodríguez"
+                            <img src="assets/images/Jose.webp"
+                                alt="José G. Salcedo"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-white hover:text-purple-400"><span
-                                            class="material-symbols-outlined">work</span></a>
-                                    <a href="#" class="text-white hover:text-blue-400"><span
-                                            class="material-symbols-outlined">mail</span></a>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">work</span></span>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Alejandro Rodríguez</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">José G. Salcedo</h3>
                         <p class="text-purple-600 dark:text-purple-400 text-sm font-semibold mb-2">CEO & Estratega</p>
                         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Visionario con 10+ años
-                            transformando marcas a nivel global.</p>
+                            transformando marcas.</p>
                     </div>
 
                     <!-- Team Member 2 -->
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-                                alt="Sofia Mendez"
+                            <img src="assets/images/Marga.webp"
+                                alt="Margareth Sánchez"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-white hover:text-purple-400"><span
-                                            class="material-symbols-outlined">brush</span></a>
-                                    <a href="#" class="text-white hover:text-blue-400"><span
-                                            class="material-symbols-outlined">mail</span></a>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">brush</span></span>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Sofia Mendez</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Margareth Sánchez</h3>
                         <p class="text-sm font-semibold mb-2" style="color: #FFAE42;">Directora Creativa</p>
                         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Experta en narrativa visual
                             y diseño de experiencias de usuario.</p>
@@ -837,43 +820,42 @@
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
-                                alt="Carlos Duarte"
+                            <img src="assets/images/d208d8cb-12ca-4a80-9c98-08cef381ef1e.png"
+                                alt="Felipe Gascón"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-white hover:text-purple-400"><span
-                                            class="material-symbols-outlined">code</span></a>
-                                    <a href="#" class="text-white hover:text-blue-400"><span
-                                            class="material-symbols-outlined">mail</span></a>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">code</span></span>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Carlos Duarte</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Felipe Gascón</h3>
                         <p class="text-green-600 dark:text-green-400 text-sm font-semibold mb-2">Tech Lead</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Arquitecto de soluciones
-                            digitales escalables y de alto rendimiento.</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Arquitecto de soluciones digitales para mejorar la eficiencia operativa y la conversión de negocios.</p>
                     </div>
 
                     <!-- Team Member 4 -->
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop"
-                                alt="Valeria Pérez"
+                            <img src="assets/images/Gigi.webp"
+                                alt="Gigi Vasquez"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <a href="#" class="text-white hover:text-purple-400"><span
-                                            class="material-symbols-outlined">campaign</span></a>
-                                    <a href="#" class="text-white hover:text-blue-400"><span
-                                            class="material-symbols-outlined">mail</span></a>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">campaign</span></span>
+                                    <span class="text-white"><span
+                                            class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
-                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Valeria Pérez</h3>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Gigi Vasquez</h3>
                         <p class="text-orange-600 dark:text-orange-400 text-sm font-semibold mb-2">Marketing Manager</p>
                         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Especialista en growth
                             marketing y estrategias de conversión.</p>
