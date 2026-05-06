@@ -367,13 +367,60 @@
         }
 
         /* ── Hero Float Animation ── */
-        .hero-float {
-            animation: heroFloat 4s ease-in-out infinite;
+        /* Cada capa flota a su propio ritmo para dar sensación de profundidad */
+        @keyframes heroFloat1 {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-10px); }
+        }
+        @keyframes heroFloat2 {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-14px); }
+        }
+        @keyframes heroFloat3 {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-18px); }
         }
 
-        @keyframes heroFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-14px); }
+        /* ── Hero Parallax Stack ── */
+        .hero-stack {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+        }
+
+        /* Capa base: flota lenta y poca amplitud */
+        .hero-stack .layer-1 {
+            position: relative; /* establece la altura natural del contenedor */
+            will-change: transform;
+            filter: drop-shadow(0 24px 48px rgba(0,0,0,0.35));
+            animation: heroFloat1 4.6s ease-in-out infinite;
+        }
+
+        /* Capa intermedia */
+        .hero-stack .layer-2 {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            will-change: transform;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25));
+            animation: heroFloat2 4s ease-in-out infinite;
+            animation-delay: -0.8s;
+        }
+
+        /* Capa frontal: flota rápido y más amplitud */
+        .hero-stack .layer-3 {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            will-change: transform;
+            filter: drop-shadow(0 16px 32px rgba(0,0,0,0.20));
+            animation: heroFloat3 3.6s ease-in-out infinite;
+            animation-delay: -1.6s;
+        }
+
+        .hero-stack img {
+            width: 100%;
+            display: block;
         }
     </style>
     <!-- Google Tag Manager -->
@@ -495,11 +542,22 @@
                     <div class="absolute w-[80%] h-[80%] rounded-full pointer-events-none"
                         style="background: radial-gradient(circle, rgba(168,85,247,0.15) 0%, rgba(255,174,66,0.10) 40%, transparent 70%); filter: blur(40px);">
                     </div>
-                    <!-- IDEA BOOM Image -->
-                    <img src="assets/images/IDEA_BOOM.webp"
-                        alt="IDEA Project - Servicios de publicidad digital y convencional: web, redes sociales, branding e impresiones"
-                        class="relative w-full max-w-[580px] drop-shadow-2xl hero-float"
-                        style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
+                    <!-- IDEA BOOM Parallax Stack -->
+                    <div id="heroStack" class="hero-stack"
+                        aria-label="IDEA Project - Servicios de publicidad digital y convencional: web, redes sociales, branding e impresiones">
+                        <!-- Layer 1: fondo (flota más lento) -->
+                        <div class="layer-1" id="heroLayer1">
+                            <img src="assets/images/Boom_IDEA_1.webp" alt="" aria-hidden="true">
+                        </div>
+                        <!-- Layer 2: intermedio -->
+                        <div class="layer-2" id="heroLayer2">
+                            <img src="assets/images/Boom IDEA 2.webp" alt="" aria-hidden="true">
+                        </div>
+                        <!-- Layer 3: frontal (flota más rápido) -->
+                        <div class="layer-3" id="heroLayer3">
+                            <img src="assets/images/Boom IDEA 3.webp" alt="" aria-hidden="true">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -774,16 +832,13 @@
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="assets/images/Jose.webp"
-                                alt="José G. Salcedo"
+                            <img src="assets/images/Jose.webp" alt="José G. Salcedo"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">work</span></span>
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">mail</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">work</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
@@ -797,16 +852,13 @@
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="assets/images/Marga.webp"
-                                alt="Margareth Sánchez"
+                            <img src="assets/images/Marga.webp" alt="Margareth Sánchez"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">brush</span></span>
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">mail</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">brush</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
@@ -820,38 +872,34 @@
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="assets/images/d208d8cb-12ca-4a80-9c98-08cef381ef1e.png"
-                                alt="Felipe Gascón"
+                            <img src="assets/images/Felipe.png" alt="Felipe Gascón"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">code</span></span>
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">mail</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">code</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
                         <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Felipe Gascón</h3>
                         <p class="text-green-600 dark:text-green-400 text-sm font-semibold mb-2">Tech Lead</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Arquitecto de soluciones digitales para mejorar la eficiencia operativa y la conversión de negocios.</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Arquitecto de soluciones
+                            digitales para mejorar la eficiencia operativa y la conversión.</p>
                     </div>
 
                     <!-- Team Member 4 -->
                     <div class="group relative">
                         <div
                             class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-border-dark aspect-[3/4] mb-4 relative">
-                            <img src="assets/images/Gigi.webp"
-                                alt="Gigi Vasquez"
+                            <img src="assets/images/Gigi.webp" alt="Gigi Vasquez"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 filter grayscale group-hover:grayscale-0">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                                 <div class="flex gap-4">
                                     <span class="text-white"><span
                                             class="material-symbols-outlined">campaign</span></span>
-                                    <span class="text-white"><span
-                                            class="material-symbols-outlined">mail</span></span>
+                                    <span class="text-white"><span class="material-symbols-outlined">mail</span></span>
                                 </div>
                             </div>
                         </div>
@@ -1081,6 +1129,109 @@
 
     <!-- Component Loader - Carga header y footer automáticamente -->
     <script src="components/component-loader.js"></script>
+
+    <!-- Hero Parallax Effect -->
+    <script>
+        (function () {
+            var stack  = document.getElementById('heroStack');
+            var layer1 = document.getElementById('heroLayer1');
+            var layer2 = document.getElementById('heroLayer2');
+            var layer3 = document.getElementById('heroLayer3');
+            if (!stack || !layer1 || !layer2 || !layer3) return;
+
+            /*
+             * Estrategia: usamos CSS custom properties por capa para el desplazamiento
+             * del parallax. La animación de flote (heroFloat*) ya vive en CSS animation
+             * y sólo mueve Y. Aquí controlamos sólo el desplazamiento X/Y del mouse
+             * mediante translate adicional usando style.transform.
+             *
+             * IMPORTANTE: para que la animación CSS y el JS coexistan sin pisarse,
+             * usamos una propiedad CSS de apoyo (--tx / --ty) y el keyframe la combina.
+             * Dado que los keyframes ya están definidos en CSS con transform, aplicamos
+             * el parallax con un wrapper independiente alrededor del contenido de cada capa.
+             *
+             * Solución limpia: wrapeamos cada capa con un div inner para el parallax,
+             * y la animación CSS queda en el div outer.
+             */
+
+            /* Factores de desplazamiento (px máx. a borde) — muy sutiles */
+            var DEPTH1 = 3;   /* fondo: movimiento mínimo */
+            var DEPTH2 = 6;   /* medio */
+            var DEPTH3 = 11;  /* frontal */
+
+            /* Factor de suavidad (lerp) — más bajo = más perezoso */
+            var EASE1 = 0.05;
+            var EASE2 = 0.07;
+            var EASE3 = 0.09;
+
+            var raf = null;
+            var targetX = 0, targetY = 0;
+            var cx1 = 0, cy1 = 0;
+            var cx2 = 0, cy2 = 0;
+            var cx3 = 0, cy3 = 0;
+
+            /* Queremos aplicar el parallax SIN romper la animación CSS del float.
+               La animación CSS usa animation (heroFloat1/2/3) en los divs layer-1/2/3.
+               Aplicamos el translate del mouse al div INTERNO de cada capa (img directo)
+               para que no interfiera con el transform de la animación del div contenedor.
+            */
+            var img1 = layer1.querySelector('img');
+            var img2 = layer2.querySelector('img');
+            var img3 = layer3.querySelector('img');
+
+            function lerp(a, b, t) { return a + (b - a) * t; }
+
+            function applyTranslate(el, x, y) {
+                el.style.transform = 'translate(' + x.toFixed(2) + 'px,' + y.toFixed(2) + 'px)';
+                el.style.transformOrigin = 'center center';
+            }
+
+            function animate() {
+                cx1 = lerp(cx1, targetX * DEPTH1, EASE1);
+                cy1 = lerp(cy1, targetY * DEPTH1, EASE1);
+                cx2 = lerp(cx2, targetX * DEPTH2, EASE2);
+                cy2 = lerp(cy2, targetY * DEPTH2, EASE2);
+                cx3 = lerp(cx3, targetX * DEPTH3, EASE3);
+                cy3 = lerp(cy3, targetY * DEPTH3, EASE3);
+
+                applyTranslate(img1, cx1, cy1);
+                applyTranslate(img2, cx2, cy2);
+                applyTranslate(img3, cx3, cy3);
+
+                raf = requestAnimationFrame(animate);
+            }
+
+            stack.addEventListener('mouseenter', function () {
+                if (!raf) raf = requestAnimationFrame(animate);
+            });
+
+            stack.addEventListener('mousemove', function (e) {
+                var rect = stack.getBoundingClientRect();
+                /* Normalizado −1 a +1 desde el centro del elemento */
+                targetX = ((e.clientX - rect.left) / rect.width  - 0.5) * 2;
+                targetY = ((e.clientY - rect.top)  / rect.height - 0.5) * 2;
+            });
+
+            stack.addEventListener('mouseleave', function () {
+                /* Regresamos suavemente a cero; cancelamos el loop cuando ya llegó */
+                targetX = 0;
+                targetY = 0;
+                var decay = setInterval(function () {
+                    var done = (Math.abs(cx1) + Math.abs(cy1) +
+                                Math.abs(cx2) + Math.abs(cy2) +
+                                Math.abs(cx3) + Math.abs(cy3)) < 0.05;
+                    if (done) {
+                        clearInterval(decay);
+                        cancelAnimationFrame(raf);
+                        raf = null;
+                        [img1, img2, img3].forEach(function (el) {
+                            el.style.transform = 'translate(0,0)';
+                        });
+                    }
+                }, 50);
+            });
+        })();
+    </script>
 </body>
 
 </html>

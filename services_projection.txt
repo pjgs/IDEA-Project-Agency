@@ -1,0 +1,23 @@
+Servicios a proyectar:
+
+1. Asesoría en materiales publicitarios.
+   - Descripción: Brindamos consultoría especializada en la creación y producción de materiales publicitarios impresos y digitales, como flyers, brochures, carteles, y campañas visuales que fortalecen la presencia de la marca.
+   - Necesario: Portfolio de trabajos previos, ejemplos de materiales, testimonios de clientes, imágenes de alta calidad y una sección dedicada en la web con copy persuasivo y SEO (palabras clave: materiales publicitarios, diseño gráfico, impresión). 
+
+2. Etiquetas de producción masiva.
+   - Descripción: Servicio integral para el diseño, producción y suministro de etiquetas para productos de gran escala, garantizando calidad de impresión, durabilidad y cumplimiento de normativas.
+   - Necesario: Catálogo de tipos de etiquetas, especificaciones técnicas (tamaños, materiales, acabados), casos de éxito, calculadora de precios o formulario de solicitud, y contenido SEO (etiquetas de producción, etiquetas masivas, rotulado). 
+
+3. Asesoría en Publicidad Digital.
+   - Descripción: Estrategia y ejecución de campañas digitales en redes sociales, Google Ads, y otras plataformas, enfocadas en generación de leads, aumento de conversiones y posicionamiento online.
+   - Necesario: Portfolio de campañas, métricas de resultados, enlaces a landing pages, testimonios, descripción de procesos, y optimización SEO (publicidad digital, marketing online, campañas PPC).
+
+Recomendaciones generales para proyectar estos servicios en la web:
+- Crear una página o sección dedicada a "Servicios" con sub‑páginas o bloques para cada uno de los tres ítems.
+- Incluir imágenes relevantes (ej. ejemplos de materiales, etiquetas, capturas de campañas digitales) y videos cortos.
+- Añadir llamadas a la acción (CTA) claras: "Solicita tu cotización", "Contacta a nuestro especialista".
+- Optimizar meta‑descriptions, headings (h1, h2) y contenido para SEO local y sectorial.
+- Incorporar testimonios y casos de estudio para generar confianza.
+- Asegurar compatibilidad móvil y carga rápida (optimizar imágenes, usar lazy‑load).
+
+Con estos elementos la web podrá proyectar eficazmente los tres servicios solicitados.
